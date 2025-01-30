@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://purpurmc.org">
-  <img src="https://user-images.githubusercontent.com/74448585/150906023-101cd383-da82-4a3c-9603-a3b5741c3994.png" alt="Purpur">
+  <img src="https://user-images.githubusercontent.com/74448585/150906023-101cd383-da82-4a3c-9603-a3b5741c3994.png" alt="Purpur" width="800">
 </a>
 
 ## Purpur
