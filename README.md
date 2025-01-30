@@ -14,4 +14,4 @@ Purpur is a drop-in replacement for [Paper](https://github.com/PaperMC/Paper) se
 <div align="center">
 
 ## Description
-This fork is only used to compile Purpur versions that are not currently in a stable release [here](https://purpurmc.org/downloads/)
+This fork is only used to compile Purpur versions that are not currently in a stable release [here](https://purpurmc.org/downloads/).
