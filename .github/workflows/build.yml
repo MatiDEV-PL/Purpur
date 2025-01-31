@@ -37,5 +37,5 @@ jobs:
       - name: Upload Artifacts
         uses: actions/download-artifact@v4
         with:
-          name: purpur-1.24.4
+          name: purpur-bundler-1.21.4-R0.1-SNAPSHOT-mojmap.jar
           path: purpur-server/build/libs/
