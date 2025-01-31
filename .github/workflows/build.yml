@@ -1,4 +1,5 @@
 name: Build
+
 on:
   workflow_dispatch:
   pull_request:
@@ -7,7 +8,7 @@ on:
       - "ver/**"
 
 jobs:
-  build:
+  build:  
     runs-on: ubuntu-latest
     if: "!contains(github.event.commits[0].message, '[ci-skip]')"
     steps:
@@ -24,9 +25,19 @@ jobs:
         run: ./gradlew applyAllPatches --no-daemon --stacktrace
       - name: Build
         run: ./gradlew build --no-daemon --stacktrace
+      - name: Create Mojmap Bundler Jar
+        run: ./gradlew createMojmapBundlerJar --no-daemon --stacktrace
       - name: Rebuild on Failure
         if: ${{ failure() }}
         run: |
           ./gradlew clean cleanCache --refresh-dependencies
           ./gradlew applyAllPatches --no-daemon --stacktrace 
-          ./gradlew build --no-daemon --stacktrace
+          ./gradlew build --no-daemon --stacktrace 
+          ./gradlew createMojmapBundlerJar --no-daemon --stacktrace
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: |
+            build/libs/*.jar
+            build/outputs/**
