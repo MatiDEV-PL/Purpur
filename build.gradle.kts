@@ -1,6 +1,5 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
-import io.papermc.paperweight.patcher.PaperweightPlugin
 
 plugins {
     java // TODO java launcher tasks
@@ -79,10 +78,6 @@ subprojects {
             }
         }
     }
-}
-
-tasks.named("createMojmapBundlerJar") {
-    archiveBaseName.set("purpur-1.21.4")
 }
 
 tasks.register("printMinecraftVersion") {
