@@ -35,7 +35,7 @@ jobs:
           ./gradlew build --no-daemon --stacktrace 
           ./gradlew createMojmapBundlerJar --no-daemon --stacktrace
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/download-artifact@v4
         with:
           name: build-artifacts
           path: purpur-server/build/libs/*.jar
