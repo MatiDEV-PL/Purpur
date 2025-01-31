@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: purpur-1.21.4
-          path: purpur-server/build/libs/*jar
+          path: purpur-server/build/libs/paper-bundler-*-mojmap.jar
